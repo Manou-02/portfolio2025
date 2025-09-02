@@ -1,0 +1,1120 @@
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manou RAKOTOARIVELO - Full-Stack JavaScript Developer</title>
+    <meta name="description" content="Full-Stack JavaScript Developer from Madagascar specializing in React, Next.js, and Node.js. Open to remote opportunities worldwide.">
+    <meta name="keywords" content="Full-Stack Developer, JavaScript, React, Next.js, Node.js, Madagascar, Remote Developer">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://manourakoto.dev/">
+    <meta property="og:title" content="Manou RAKOTOARIVELO - Full-Stack JavaScript Developer">
+    <meta property="og:description" content="Full-Stack JavaScript Developer from Madagascar specializing in React, Next.js, and Node.js. Open to remote opportunities worldwide.">
+    <meta property="og:image" content="https://manourakoto.dev/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://manourakoto.dev/">
+    <meta property="twitter:title" content="Manou RAKOTOARIVELO - Full-Stack JavaScript Developer">
+    <meta property="twitter:description" content="Full-Stack JavaScript Developer from Madagascar specializing in React, Next.js, and Node.js. Open to remote opportunities worldwide.">
+    <meta property="twitter:image" content="https://manourakoto.dev/og-image.jpg">
+
+    <link rel="canonical" href="https://manourakoto.dev/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                borderRadius: {
+                    lg: "var(--radius)",
+                    md: "calc(var(--radius) - 2px)",
+                    sm: "calc(var(--radius) - 4px)",
+                },
+                colors: {
+                    background: "var(--background)",
+                    foreground: "var(--foreground)",
+                    card: {
+                        DEFAULT: "var(--card)",
+                        foreground: "var(--card-foreground)",
+                    },
+                    popover: {
+                        DEFAULT: "var(--popover)",
+                        foreground: "var(--popover-foreground)",
+                    },
+                    primary: {
+                        DEFAULT: "var(--primary)",
+                        foreground: "var(--primary-foreground)",
+                    },
+                    secondary: {
+                        DEFAULT: "var(--secondary)",
+                        foreground: "var(--secondary-foreground)",
+                    },
+                    muted: {
+                        DEFAULT: "var(--muted)",
+                        foreground: "var(--muted-foreground)",
+                    },
+                    accent: {
+                        DEFAULT: "var(--accent)",
+                        foreground: "var(--accent-foreground)",
+                    },
+                    destructive: {
+                        DEFAULT: "var(--destructive)",
+                        foreground: "var(--destructive-foreground)",
+                    },
+                    border: "var(--border)",
+                    input: "var(--input)",
+                    ring: "var(--ring)",
+                    chart: {
+                        "1": "var(--chart-1)",
+                        "2": "var(--chart-2)",
+                        "3": "var(--chart-3)",
+                        "4": "var(--chart-4)",
+                        "5": "var(--chart-5)",
+                    }
+                },
+                fontFamily: {
+                    sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif"],
+                },
+                animation: {
+                    'fade-in': 'fadeIn 0.5s ease-in-out',
+                    'slide-up': 'slideUp 0.6s ease-out',
+                    'float': 'float 3s ease-in-out infinite',
+                }
+            }
+        },
+        darkMode: 'class',
+    };
+    </script>
+
+    <style>
+        :root {
+            --radius: 12px;
+            --background: hsl(0 0% 100%);
+            --foreground: hsl(222.2 84% 4.9%);
+            --card: hsl(0 0% 100%);
+            --card-foreground: hsl(222.2 84% 4.9%);
+            --popover: hsl(0 0% 100%);
+            --popover-foreground: hsl(222.2 84% 4.9%);
+            --primary: hsl(221.2 83.2% 53.3%);
+            --primary-foreground: hsl(210 40% 98%);
+            --secondary: hsl(210 40% 96%);
+            --secondary-foreground: hsl(222.2 84% 4.9%);
+            --muted: hsl(210 40% 96%);
+            --muted-foreground: hsl(215.4 16.3% 46.9%);
+            --accent: hsl(210 40% 96%);
+            --accent-foreground: hsl(222.2 84% 4.9%);
+            --destructive: hsl(0 84.2% 60.2%);
+            --destructive-foreground: hsl(210 40% 98%);
+            --border: hsl(214.3 31.8% 91.4%);
+            --input: hsl(214.3 31.8% 91.4%);
+            --ring: hsl(221.2 83.2% 53.3%);
+            --chart-1: hsl(12 76% 61%);
+            --chart-2: hsl(173 58% 39%);
+            --chart-3: hsl(197 37% 24%);
+            --chart-4: hsl(43 74% 66%);
+            --chart-5: hsl(27 87% 67%);
+        }
+
+        .dark {
+            --background: hsl(222.2 84% 4.9%);
+            --foreground: hsl(210 40% 98%);
+            --card: hsl(222.2 84% 4.9%);
+            --card-foreground: hsl(210 40% 98%);
+            --popover: hsl(222.2 84% 4.9%);
+            --popover-foreground: hsl(210 40% 98%);
+            --primary: hsl(217.2 91.2% 59.8%);
+            --primary-foreground: hsl(222.2 84% 4.9%);
+            --secondary: hsl(217.2 32.6% 17.5%);
+            --secondary-foreground: hsl(210 40% 98%);
+            --muted: hsl(217.2 32.6% 17.5%);
+            --muted-foreground: hsl(215 20.2% 65.1%);
+            --accent: hsl(217.2 32.6% 17.5%);
+            --accent-foreground: hsl(210 40% 98%);
+            --destructive: hsl(0 62.8% 30.6%);
+            --destructive-foreground: hsl(210 40% 98%);
+            --border: hsl(217.2 32.6% 17.5%);
+            --input: hsl(217.2 32.6% 17.5%);
+            --ring: hsl(224.3 76.3% 94.1%);
+            --chart-1: hsl(220 70% 50%);
+            --chart-2: hsl(160 60% 45%);
+            --chart-3: hsl(30 80% 55%);
+            --chart-4: hsl(280 65% 60%);
+            --chart-5: hsl(340 75% 55%);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--chart-2)));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dark .glass-effect {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-foreground transition-colors duration-300">
+    <!-- @COMPONENT: Navigation [sticky header with logo, menu items, theme/language toggles] -->
+    <nav class="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-xl font-bold gradient-text hover:opacity-80 transition-opacity" data-bind="user.name">
+                        MR
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-foreground hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary" data-lang="en">Home</a>
+                        <a href="#about" class="text-muted-foreground hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary" data-lang="en">About</a>
+                        <a href="#projects" class="text-muted-foreground hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary" data-lang="en">Projects</a>
+                        <a href="#experience" class="text-muted-foreground hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary" data-lang="en">Experience</a>
+                        <a href="#contact" class="text-muted-foreground hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary" data-lang="en">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Theme & Language Controls -->
+                <div class="flex items-center space-x-4">
+                    <!-- Language Switcher -->
+                    <div class="relative">
+                        <button id="lang-toggle" class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-secondary text-secondary-foreground hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                            <span data-current-lang="en">🇬🇧 EN</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-secondary text-secondary-foreground hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                        <i data-lucide="sun" class="w-5 h-5 dark:hidden"></i>
+                        <i data-lucide="moon" class="w-5 h-5 hidden dark:block"></i>
+                    </button>
+
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg bg-secondary text-secondary-foreground hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-background">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-accent transition-colors" data-lang="en">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-primary hover:bg-accent transition-colors" data-lang="en">About</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-primary hover:bg-accent transition-colors" data-lang="en">Projects</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-primary hover:bg-accent transition-colors" data-lang="en">Experience</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-muted-foreground hover:text-primary hover:bg-accent transition-colors" data-lang="en">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <main>
+        <!-- @COMPONENT: HeroSection [main landing area with introduction and CTAs] -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5"></div>
+            
+            <div class="relative max-w-6xl mx-auto text-center">
+                <div class="animate-slide-up">
+                    <!-- Professional photo placeholder with modern workspace background -->
+                    <div class="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden ring-4 ring-primary/20 shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400" 
+                             alt="Manou RAKOTOARIVELO - Professional headshot" 
+                             class="w-full h-full object-cover" data-mock="true" />
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                        <span data-bind="user.name" data-lang="en">Manou RAKOTOARIVELO</span>
+                    </h1>
+                    
+                    <p class="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-4">
+                        <span data-bind="user.title" data-lang="en">Full-Stack JavaScript Developer</span>
+                    </p>
+                    
+                    <p class="text-lg text-muted-foreground mb-2 flex items-center justify-center gap-2">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        <span data-bind="user.location" data-lang="en">Madagascar • Open to Remote</span>
+                    </p>
+                    
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
+                        <span data-lang="en">Crafting scalable web applications with React, Next.js, and Node.js. Passionate about clean code, performance optimization, and delivering exceptional user experiences.</span>
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-medium hover:bg-primary/90 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" data-event="click:scrollToProjects">
+                            <i data-lucide="briefcase" class="w-5 h-5"></i>
+                            <span data-lang="en">View My Work</span>
+                        </button>
+                        <button class="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-xl font-medium hover:bg-accent transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" data-event="click:scrollToContact">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                            <span data-lang="en">Get in Touch</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Floating Elements -->
+                <div class="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full animate-float hidden lg:block"></div>
+                <div class="absolute bottom-20 right-10 w-16 h-16 bg-accent/20 rounded-full animate-float" style="animation-delay: 1s;"></div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: HeroSection -->
+
+        <!-- @COMPONENT: AboutSection [biography and skills showcase] -->
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+                        <span data-lang="en">About Me</span>
+                    </h2>
+                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                        <span data-lang="en">Passionate developer with expertise in modern JavaScript technologies and a commitment to building exceptional digital experiences.</span>
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Bio Content -->
+                    <div class="space-y-6">
+                        <div class="prose prose-lg max-w-none text-foreground">
+                            <p data-lang="en">
+                                Based in the beautiful island of Madagascar, I'm a dedicated Full-Stack JavaScript Developer with over 5 years of experience building scalable web applications. I specialize in React ecosystem technologies and have a passion for creating performant, accessible, and user-friendly applications.
+                            </p>
+                            <p data-lang="en">
+                                My journey started with curiosity about how websites work, and has evolved into expertise across the entire development stack. I believe in writing clean, maintainable code and staying current with the latest industry best practices.
+                            </p>
+                            <p data-lang="en">
+                                When I'm not coding, you'll find me exploring Madagascar's diverse landscapes, contributing to open-source projects, or sharing knowledge with the local developer community.
+                            </p>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="grid grid-cols-3 gap-6 pt-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary mb-2">50+</div>
+                                <div class="text-sm text-muted-foreground" data-lang="en">Projects Completed</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary mb-2">5+</div>
+                                <div class="text-sm text-muted-foreground" data-lang="en">Years Experience</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-primary mb-2">20+</div>
+                                <div class="text-sm text-muted-foreground" data-lang="en">Happy Clients</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Grid -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-6" data-lang="en">Technical Skills</h3>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                                <!-- @MAP: skills.map(skill => ( -->
+                                <div class="bg-card border border-border rounded-xl p-4 text-center hover:shadow-lg transition-shadow">
+                                    <div class="w-12 h-12 mx-auto mb-3 bg-primary/10 rounded-lg flex items-center justify-center">
+                                        <i data-lucide="code" class="w-6 h-6 text-primary"></i>
+                                    </div>
+                                    <h4 class="font-medium text-sm" data-mock="true">JavaScript</h4>
+                                </div>
+                                <div class="bg-card border border-border rounded-xl p-4 text-center hover:shadow-lg transition-shadow">
+                                    <div class="w-12 h-12 mx-auto mb-3 bg-primary/10 rounded-lg flex items-center justify-center">
+                                        <i data-lucide="layers" class="w-6 h-6 text-primary"></i>
+                                    </div>
+                                    <h4 class="font-medium text-sm" data-mock="true">TypeScript</h4>
+                                </div>
+                                <div class="bg-card border border-border rounded-xl p-4 text-center hover:shadow-lg transition-shadow">
+                                    <div class="w-12 h-12 mx-auto mb-3 bg-primary/10 rounded-lg flex items-center justify-center">
+                                        <i data-lucide="atom" class="w-6 h-6 text-primary"></i>
+                                    </div>
+                                    <h4 class="font-medium text-sm" data-mock="true">React</h4>
+                                </div>
+                                <div class="bg-card border border-border rounded-xl p-4 text-center hover:shadow-lg transition-shadow">
+                                    <div class="w-12 h-12 mx-auto mb-3 bg-primary/10 rounded-lg flex items-center justify-center">
+                                        <i data-lucide="triangle" class="w-6 h-6 text-primary"></i>
+                                    </div>
+                                    <h4 class="font-medium text-sm" data-mock="true">Next.js</h4>
+                                </div>
+                                <div class="bg-card border border-border rounded-xl p-4 text-center hover:shadow-lg transition-shadow">
+                                    <div class="w-12 h-12 mx-auto mb-3 bg-primary/10 rounded-lg flex items-center justify-center">
+                                        <i data-lucide="server" class="w-6 h-6 text-primary"></i>
+                                    </div>
+                                    <h4 class="font-medium text-sm" data-mock="true">Node.js</h4>
+                                </div>
+                                <div class="bg-card border border-border rounded-xl p-4 text-center hover:shadow-lg transition-shadow">
+                                    <div class="w-12 h-12 mx-auto mb-3 bg-primary/10 rounded-lg flex items-center justify-center">
+                                        <i data-lucide="database" class="w-6 h-6 text-primary"></i>
+                                    </div>
+                                    <h4 class="font-medium text-sm" data-mock="true">PostgreSQL</h4>
+                                </div>
+                                <!-- @END_MAP )) -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: AboutSection -->
+
+        <!-- @COMPONENT: ProjectsSection [filterable portfolio gallery] -->
+        <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+                        <span data-lang="en">Featured Projects</span>
+                    </h2>
+                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+                        <span data-lang="en">A collection of projects showcasing my expertise in modern web development technologies and best practices.</span>
+                    </p>
+                </div>
+
+                <!-- Project Filters -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12">
+                    <button class="px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary" data-filter="all" data-lang="en">All Projects</button>
+                    <button class="px-6 py-2 rounded-full bg-secondary text-secondary-foreground font-medium transition-all hover:bg-accent hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary" data-filter="frontend" data-lang="en">Frontend</button>
+                    <button class="px-6 py-2 rounded-full bg-secondary text-secondary-foreground font-medium transition-all hover:bg-accent hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary" data-filter="fullstack" data-lang="en">Full-Stack</button>
+                    <button class="px-6 py-2 rounded-full bg-secondary text-secondary-foreground font-medium transition-all hover:bg-accent hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary" data-filter="mobile" data-lang="en">Mobile</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- @MAP: projects.map(project => ( -->
+                    <!-- Project Card 1 -->
+                    <div class="group bg-card border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="fullstack">
+                        <!-- Modern e-commerce dashboard with analytics and product management interface -->
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
+                                 alt="E-commerce Analytics Dashboard" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-mock-image="true" />
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-xl font-semibold" data-mock="true" data-lang="en">E-commerce Analytics Platform</h3>
+                                <div class="flex space-x-2">
+                                    <a href="#" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary" data-implementation="Link to live demo">
+                                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                                    </a>
+                                    <a href="#" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary" data-implementation="Link to GitHub repo">
+                                        <i data-lucide="github" class="w-4 h-4"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-muted-foreground mb-4" data-mock="true" data-lang="en">
+                                Comprehensive analytics dashboard for e-commerce businesses with real-time data visualization, inventory management, and customer insights.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium" data-mock="true">Next.js</span>
+                                <span class="px-3 py-1 bg-accent/10 text-accent-foreground rounded-full text-xs font-medium" data-mock="true">TypeScript</span>
+                                <span class="px-3 py-1 bg-chart-1/10 text-chart-1 rounded-full text-xs font-medium" data-mock="true">Prisma</span>
+                                <span class="px-3 py-1 bg-chart-2/10 text-chart-2 rounded-full text-xs font-medium" data-mock="true">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="group bg-card border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="frontend">
+                        <!-- Modern travel booking interface with destination cards and search functionality -->
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
+                                 alt="Travel Booking Platform Interface" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-mock-image="true" />
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-xl font-semibold" data-mock="true" data-lang="en">Travel Booking Platform</h3>
+                                <div class="flex space-x-2">
+                                    <a href="#" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                                    </a>
+                                    <a href="#" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                                        <i data-lucide="github" class="w-4 h-4"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-muted-foreground mb-4" data-mock="true" data-lang="en">
+                                Modern travel booking interface with advanced search, interactive maps, and seamless user experience for discovering and booking destinations.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium" data-mock="true">React</span>
+                                <span class="px-3 py-1 bg-accent/10 text-accent-foreground rounded-full text-xs font-medium" data-mock="true">Tailwind CSS</span>
+                                <span class="px-3 py-1 bg-chart-3/10 text-chart-3 rounded-full text-xs font-medium" data-mock="true">Framer Motion</span>
+                                <span class="px-3 py-1 bg-chart-4/10 text-chart-4 rounded-full text-xs font-medium" data-mock="true">Mapbox</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="group bg-card border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="fullstack">
+                        <!-- Modern fintech app interface showing financial dashboard and cryptocurrency trading -->
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
+                                 alt="Fintech Trading Platform" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-mock-image="true" />
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-xl font-semibold" data-mock="true" data-lang="en">Crypto Trading Platform</h3>
+                                <div class="flex space-x-2">
+                                    <a href="#" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                                    </a>
+                                    <a href="#" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                                        <i data-lucide="github" class="w-4 h-4"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-muted-foreground mb-4" data-mock="true" data-lang="en">
+                                Secure cryptocurrency trading platform with real-time market data, portfolio tracking, and advanced charting capabilities.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium" data-mock="true">Next.js</span>
+                                <span class="px-3 py-1 bg-accent/10 text-accent-foreground rounded-full text-xs font-medium" data-mock="true">WebSocket</span>
+                                <span class="px-3 py-1 bg-chart-5/10 text-chart-5 rounded-full text-xs font-medium" data-mock="true">Chart.js</span>
+                                <span class="px-3 py-1 bg-chart-1/10 text-chart-1 rounded-full text-xs font-medium" data-mock="true">Redis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="group bg-card border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="frontend">
+                        <!-- Modern social media app interface with posts, stories, and messaging features -->
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
+                                 alt="Social Media Application" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-mock-image="true" />
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-xl font-semibold" data-mock="true" data-lang="en">Social Media App</h3>
+                                <div class="flex space-x-2">
+                                    <a href="#" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                                    </a>
+                                    <a href="#" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                                        <i data-lucide="github" class="w-4 h-4"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-muted-foreground mb-4" data-mock="true" data-lang="en">
+                                Modern social media application with real-time messaging, story features, and advanced content sharing capabilities.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium" data-mock="true">React Native</span>
+                                <span class="px-3 py-1 bg-accent/10 text-accent-foreground rounded-full text-xs font-medium" data-mock="true">Expo</span>
+                                <span class="px-3 py-1 bg-chart-2/10 text-chart-2 rounded-full text-xs font-medium" data-mock="true">Firebase</span>
+                                <span class="px-3 py-1 bg-chart-3/10 text-chart-3 rounded-full text-xs font-medium" data-mock="true">Socket.io</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 5 -->
+                    <div class="group bg-card border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="fullstack">
+                        <!-- Modern project management tool with kanban boards and team collaboration features -->
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
+                                 alt="Project Management Tool" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-mock-image="true" />
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-xl font-semibold" data-mock="true" data-lang="en">Project Management Tool</h3>
+                                <div class="flex space-x-2">
+                                    <a href="#" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                                    </a>
+                                    <a href="#" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                                        <i data-lucide="github" class="w-4 h-4"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-muted-foreground mb-4" data-mock="true" data-lang="en">
+                                Collaborative project management platform with Kanban boards, team chat, file sharing, and advanced reporting features.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium" data-mock="true">React</span>
+                                <span class="px-3 py-1 bg-accent/10 text-accent-foreground rounded-full text-xs font-medium" data-mock="true">Express.js</span>
+                                <span class="px-3 py-1 bg-chart-4/10 text-chart-4 rounded-full text-xs font-medium" data-mock="true">MongoDB</span>
+                                <span class="px-3 py-1 bg-chart-5/10 text-chart-5 rounded-full text-xs font-medium" data-mock="true">Socket.io</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 6 -->
+                    <div class="group bg-card border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="mobile">
+                        <!-- Modern fitness tracking app with workout plans and progress monitoring -->
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
+                                 alt="Fitness Tracking Mobile App" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" data-mock-image="true" />
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h3 class="text-xl font-semibold" data-mock="true" data-lang="en">Fitness Tracking App</h3>
+                                <div class="flex space-x-2">
+                                    <a href="#" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                                    </a>
+                                    <a href="#" class="p-2 rounded-lg bg-secondary hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+                                        <i data-lucide="github" class="w-4 h-4"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-muted-foreground mb-4" data-mock="true" data-lang="en">
+                                Cross-platform fitness app with workout tracking, progress monitoring, social features, and personalized training plans.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium" data-mock="true">React Native</span>
+                                <span class="px-3 py-1 bg-accent/10 text-accent-foreground rounded-full text-xs font-medium" data-mock="true">Expo</span>
+                                <span class="px-3 py-1 bg-chart-1/10 text-chart-1 rounded-full text-xs font-medium" data-mock="true">SQLite</span>
+                                <span class="px-3 py-1 bg-chart-2/10 text-chart-2 rounded-full text-xs font-medium" data-mock="true">HealthKit</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- @END_MAP )) -->
+                </div>
+
+                <!-- View All Projects Button -->
+                <div class="text-center mt-12">
+                    <button class="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-xl font-medium hover:bg-accent transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary">
+                        <span data-lang="en">View All Projects</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: ProjectsSection -->
+
+        <!-- @COMPONENT: ExperienceSection [professional timeline] -->
+        <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+                        <span data-lang="en">Experience</span>
+                    </h2>
+                    <p class="text-xl text-muted-foreground">
+                        <span data-lang="en">My professional journey and key achievements in web development.</span>
+                    </p>
+                </div>
+
+                <!-- Timeline -->
+                <div class="relative">
+                    <div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-border"></div>
+                    
+                    <!-- @MAP: experiences.map(experience => ( -->
+                    <!-- Experience Item 1 -->
+                    <div class="relative flex flex-col md:flex-row md:justify-between md:items-center mb-12">
+                        <div class="md:w-5/12 md:text-right md:pr-8">
+                            <div class="bg-card border border-border rounded-2xl p-6 shadow-lg ml-12 md:ml-0">
+                                <h3 class="text-xl font-semibold mb-2" data-mock="true" data-lang="en">Senior Full-Stack Developer</h3>
+                                <p class="text-primary font-medium mb-2" data-mock="true" data-lang="en">TechCorp Solutions</p>
+                                <p class="text-muted-foreground text-sm mb-4" data-mock="true">2022 - Present</p>
+                                <ul class="text-sm text-muted-foreground space-y-1" data-mock="true">
+                                    <li data-lang="en">• Led development of 5+ enterprise applications</li>
+                                    <li data-lang="en">• Reduced page load times by 40% through optimization</li>
+                                    <li data-lang="en">• Mentored 3 junior developers</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background flex items-center justify-center">
+                            <i data-lucide="briefcase" class="w-4 h-4 text-primary-foreground"></i>
+                        </div>
+                        <div class="md:w-5/12 md:pl-8">
+                            <div class="text-muted-foreground text-sm mt-4 md:mt-0" data-mock="true" data-lang="en">
+                                Leading the development team in creating scalable web applications using modern React and Node.js technologies.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 2 -->
+                    <div class="relative flex flex-col md:flex-row md:justify-between md:items-center mb-12">
+                        <div class="md:w-5/12 md:text-right md:pr-8">
+                            <div class="text-muted-foreground text-sm mb-4 md:mb-0" data-mock="true" data-lang="en">
+                                Developed and maintained multiple client projects, focusing on performance and user experience optimization.
+                            </div>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 bg-accent rounded-full border-4 border-background flex items-center justify-center">
+                            <i data-lucide="code" class="w-4 h-4 text-accent-foreground"></i>
+                        </div>
+                        <div class="md:w-5/12 md:pl-8">
+                            <div class="bg-card border border-border rounded-2xl p-6 shadow-lg ml-12 md:ml-0">
+                                <h3 class="text-xl font-semibold mb-2" data-mock="true" data-lang="en">Frontend Developer</h3>
+                                <p class="text-accent font-medium mb-2" data-mock="true" data-lang="en">WebCraft Agency</p>
+                                <p class="text-muted-foreground text-sm mb-4" data-mock="true">2020 - 2022</p>
+                                <ul class="text-sm text-muted-foreground space-y-1" data-mock="true">
+                                    <li data-lang="en">• Built 15+ responsive web applications</li>
+                                    <li data-lang="en">• Implemented design systems and component libraries</li>
+                                    <li data-lang="en">• Improved client satisfaction scores by 25%</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 3 -->
+                    <div class="relative flex flex-col md:flex-row md:justify-between md:items-center mb-12">
+                        <div class="md:w-5/12 md:text-right md:pr-8">
+                            <div class="bg-card border border-border rounded-2xl p-6 shadow-lg ml-12 md:ml-0">
+                                <h3 class="text-xl font-semibold mb-2" data-mock="true" data-lang="en">Junior Web Developer</h3>
+                                <p class="text-chart-1 font-medium mb-2" data-mock="true" data-lang="en">StartupCo</p>
+                                <p class="text-muted-foreground text-sm mb-4" data-mock="true">2019 - 2020</p>
+                                <ul class="text-sm text-muted-foreground space-y-1" data-mock="true">
+                                    <li data-lang="en">• Contributed to core product development</li>
+                                    <li data-lang="en">• Learned modern JavaScript frameworks</li>
+                                    <li data-lang="en">• Collaborated with design and product teams</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-8 h-8 bg-chart-1 rounded-full border-4 border-background flex items-center justify-center">
+                            <i data-lucide="rocket" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <div class="md:w-5/12 md:pl-8">
+                            <div class="text-muted-foreground text-sm mt-4 md:mt-0" data-mock="true" data-lang="en">
+                                Started my professional journey in a fast-paced startup environment, quickly learning and adapting to new technologies.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- @END_MAP )) -->
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: ExperienceSection -->
+
+        <!-- @COMPONENT: ContactSection [contact form and information] -->
+        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+                        <span data-lang="en">Get In Touch</span>
+                    </h2>
+                    <p class="text-xl text-muted-foreground">
+                        <span data-lang="en">Ready to collaborate? Let's discuss your next project.</span>
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-6" data-lang="en">Let's Connect</h3>
+                            <p class="text-muted-foreground mb-8" data-lang="en">
+                                I'm always interested in hearing about new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!
+                            </p>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="mail" class="w-6 h-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium" data-lang="en">Email</h4>
+                                    <p class="text-muted-foreground" data-mock="true">manou@example.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium" data-lang="en">Location</h4>
+                                    <p class="text-muted-foreground" data-lang="en">Madagascar • Remote Worldwide</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="clock" class="w-6 h-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium" data-lang="en">Response Time</h4>
+                                    <p class="text-muted-foreground" data-lang="en">Usually within 24 hours</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="pt-8">
+                            <h4 class="font-medium mb-4" data-lang="en">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-primary" data-implementation="Link to GitHub profile">
+                                    <i data-lucide="github" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-primary" data-implementation="Link to LinkedIn profile">
+                                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-primary" data-implementation="Link to Twitter profile">
+                                    <i data-lucide="twitter" class="w-5 h-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-card border border-border rounded-2xl p-8 shadow-lg">
+                        <form class="space-y-6" data-implementation="Form should validate and submit to contact API">
+                            <!-- Honeypot for spam protection -->
+                            <input type="text" name="honeypot" style="display: none;" tabindex="-1" autocomplete="off">
+                            
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2" data-lang="en">Name</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full px-4 py-3 border border-input rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                                       placeholder="Your full name" data-lang="en">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2" data-lang="en">Email</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-input rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                                       placeholder="your.email@example.com" data-mock="true">
+                            </div>
+
+                            <div>
+                                <label for="subject" class="block text-sm font-medium mb-2" data-lang="en">Subject</label>
+                                <input type="text" id="subject" name="subject" required 
+                                       class="w-full px-4 py-3 border border-input rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                                       placeholder="Project inquiry" data-lang="en">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-2" data-lang="en">Message</label>
+                                <textarea id="message" name="message" rows="5" required 
+                                          class="w-full px-4 py-3 border border-input rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors resize-vertical"
+                                          placeholder="Tell me about your project..." data-lang="en"></textarea>
+                            </div>
+
+                            <button type="submit" 
+                                    class="w-full bg-primary text-primary-foreground px-8 py-4 rounded-xl font-medium hover:bg-primary/90 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                                    data-event="click:handleFormSubmit">
+                                <span class="flex items-center justify-center gap-2">
+                                    <i data-lucide="send" class="w-5 h-5"></i>
+                                    <span data-lang="en">Send Message</span>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: ContactSection -->
+    </main>
+
+    <!-- @COMPONENT: Footer [site links and copyright] -->
+    <footer class="border-t border-border bg-muted/50 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold gradient-text mb-4" data-bind="user.name">Manou RAKOTOARIVELO</h3>
+                    <p class="text-muted-foreground mb-4" data-lang="en">
+                        Full-Stack JavaScript Developer passionate about creating exceptional digital experiences with modern technologies.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4" data-lang="en">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-muted-foreground hover:text-primary transition-colors" data-lang="en">About</a></li>
+                        <li><a href="#projects" class="text-muted-foreground hover:text-primary transition-colors" data-lang="en">Projects</a></li>
+                        <li><a href="#experience" class="text-muted-foreground hover:text-primary transition-colors" data-lang="en">Experience</a></li>
+                        <li><a href="#contact" class="text-muted-foreground hover:text-primary transition-colors" data-lang="en">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4" data-lang="en">Services</h4>
+                    <ul class="space-y-2">
+                        <li><span class="text-muted-foreground" data-lang="en">Web Development</span></li>
+                        <li><span class="text-muted-foreground" data-lang="en">Mobile Apps</span></li>
+                        <li><span class="text-muted-foreground" data-lang="en">API Development</span></li>
+                        <li><span class="text-muted-foreground" data-lang="en">Consulting</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-muted-foreground text-sm">
+                    <span data-lang="en">© 2024 Manou RAKOTOARIVELO. All rights reserved.</span>
+                </p>
+                <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-muted-foreground hover:text-primary text-sm transition-colors" data-lang="en">Privacy Policy</a>
+                    <a href="#" class="text-muted-foreground hover:text-primary text-sm transition-colors" data-lang="en">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Manou RAKOTOARIVELO",
+        "jobTitle": "Full-Stack JavaScript Developer",
+        "url": "https://manourakoto.dev",
+        "sameAs": [
+            "https://github.com/manourakoto",
+            "https://linkedin.com/in/manourakoto",
+            "https://twitter.com/manourakoto"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "Madagascar"
+        },
+        "knowsAbout": [
+            "JavaScript",
+            "TypeScript", 
+            "React",
+            "Next.js",
+            "Node.js",
+            "Web Development",
+            "Full-Stack Development"
+        ]
+    }
+    </script>
+
+    <script>
+        // Theme Management
+        (function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+            
+            // Check for saved theme preference or default to system preference
+            const savedTheme = localStorage.getItem('theme');
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            const initialTheme = savedTheme || systemTheme;
+            
+            html.classList.toggle('dark', initialTheme === 'dark');
+            
+            themeToggle.addEventListener('click', () => {
+                const isDark = html.classList.contains('dark');
+                html.classList.toggle('dark', !isDark);
+                localStorage.setItem('theme', !isDark ? 'dark' : 'light');
+            });
+
+            // Listen for system theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                if (!localStorage.getItem('theme')) {
+                    html.classList.toggle('dark', e.matches);
+                }
+            });
+        })();
+
+        // Mobile Menu Management
+        (function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking on a link
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        })();
+
+        // Language Management
+        (function() {
+            const langToggle = document.getElementById('lang-toggle');
+            const currentLangSpan = langToggle.querySelector('[data-current-lang]');
+            
+            let currentLang = localStorage.getItem('language') || 'en';
+            updateLanguage(currentLang);
+            
+            langToggle.addEventListener('click', () => {
+                currentLang = currentLang === 'en' ? 'fr' : 'en';
+                updateLanguage(currentLang);
+                localStorage.setItem('language', currentLang);
+            });
+            
+            function updateLanguage(lang) {
+                currentLangSpan.textContent = lang === 'en' ? '🇬🇧 EN' : '🇫🇷 FR';
+                currentLangSpan.setAttribute('data-current-lang', lang);
+                
+                // TODO: Implement full i18n content switching
+                // This would integrate with a translation system
+                document.documentElement.lang = lang;
+            }
+        })();
+
+        // Smooth Scrolling for Navigation
+        (function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        })();
+
+        // Project Filtering
+        (function() {
+            const filterButtons = document.querySelectorAll('[data-filter]');
+            const projectCards = document.querySelectorAll('[data-category]');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+                    
+                    // Update active filter button
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-primary', 'text-primary-foreground');
+                        btn.classList.add('bg-secondary', 'text-secondary-foreground');
+                    });
+                    button.classList.add('bg-primary', 'text-primary-foreground');
+                    button.classList.remove('bg-secondary', 'text-secondary-foreground');
+                    
+                    // Filter projects
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        })();
+
+        // Form Handling
+        (function() {
+            const contactForm = document.querySelector('#contact form');
+            
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const formData = new FormData(contactForm);
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                
+                // Check honeypot
+                if (formData.get('honeypot')) {
+                    return; // Spam detected
+                }
+                
+                // Disable submit button
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 animate-spin mr-2"></i>Sending...';
+                
+                try {
+                    // TODO: Implement actual form submission to API
+                    await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
+                    
+                    // Success state
+                    submitButton.innerHTML = '<i data-lucide="check" class="w-5 h-5 mr-2"></i>Message Sent!';
+                    submitButton.classList.remove('bg-primary');
+                    submitButton.classList.add('bg-green-600');
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = '<i data-lucide="send" class="w-5 h-5 mr-2"></i>Send Message';
+                        submitButton.classList.add('bg-primary');
+                        submitButton.classList.remove('bg-green-600');
+                    }, 3000);
+                    
+                } catch (error) {
+                    // Error state
+                    submitButton.innerHTML = '<i data-lucide="x" class="w-5 h-5 mr-2"></i>Error - Try Again';
+                    submitButton.classList.remove('bg-primary');
+                    submitButton.classList.add('bg-destructive');
+                    submitButton.disabled = false;
+                    
+                    // Reset button after 3 seconds
+                    setTimeout(() => {
+                        submitButton.innerHTML = '<i data-lucide="send" class="w-5 h-5 mr-2"></i>Send Message';
+                        submitButton.classList.add('bg-primary');
+                        submitButton.classList.remove('bg-destructive');
+                    }, 3000);
+                }
+            });
+        })();
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // @STATE: currentLanguage:string = 'en'
+        // @STATE: isDarkMode:boolean = false
+        // @STATE: mobileMenuOpen:boolean = false
+        // @STATE: activeProjectFilter:string = 'all'
+    </script>
+</body>
+</html>
