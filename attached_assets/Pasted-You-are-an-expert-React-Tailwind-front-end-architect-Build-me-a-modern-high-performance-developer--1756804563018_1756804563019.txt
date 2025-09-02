@@ -1,0 +1,64 @@
+You are an expert React/Tailwind front-end architect. Build me a modern, high-performance developer portfolio.
+
+Goal:
+- A sleek portfolio for a Full-Stack JavaScript Developer (React/Next.js, Node.js).
+- Elegant micro-interactions and subtle animations (no heavy/parallax overload).
+- Excellent SEO and accessibility.
+
+Tech & Setup:
+- React + Next.js (App Router) + TypeScript.
+- Tailwind CSS for styling.
+- Framer Motion for animations.
+- i18n (English 🇬🇧 and French 🇫🇷) with language switcher (persist user choice).
+- Dark/Light mode with system preference detection and manual toggle.
+- ESLint + Prettier configured.
+- Image optimization, code-splitting, and lazy-loading where relevant.
+
+Pages & Sections:
+- Home/Hero: Name, role, short value proposition, CTA buttons (View Work, Contact).
+- About: brief bio, skills grid (JS/TS, React, Next.js, Node, DBs, cloud).
+- Projects: filterable gallery (min 6 cards). Each card: title, short description, tech tags, screenshots, links (Live, GitHub), case study page template.
+- Experience/Timeline: companies/clients, roles, dates, highlights, achievements.
+- Blog (optional, can be toggled): MDX support, tags, search.
+- Contact: validated form (name, email, message), spam protection (honeypot), success/error states.
+- 404 and 500 pages.
+
+Content Requirements:
+- Use real, professional placeholder content for me: 
+  - Name: “Manou RAKOTOARIVELO”
+  - Title: “Full-Stack JavaScript Developer”
+  - Location: Madagascar (open to remote)
+  - Short bio (2–3 sentences) highlighting React/Next.js, Node.js, APIs, and performance.
+  - 6 sample projects with realistic descriptions and tech stacks.
+- Provide copy in both EN and FR (e.g., “Contact” / “Contact”, “Projects” / “Projets”).
+- Include Open Graph/Twitter meta, sitemap, robots.txt, canonical URLs.
+
+UI/UX:
+- Minimal, modern look: generous whitespace, grid layout, rounded-2xl, soft shadows.
+- Keyboard-navigable, focus states visible, prefers-reduced-motion respected.
+- Reusable components (Button, Badge, Card, Section, Tag, ThemeToggle, LangToggle).
+- Responsive from mobile → desktop; test on common breakpoints.
+
+SEO & Performance:
+- Semantic HTML, proper heading hierarchy.
+- Next.js Metadata API for title/description per page.
+- JSON-LD schema (Person, WebSite, BlogPosting for posts, Project/WorkExample for projects).
+- Lighthouse targets: 95+ Performance, 100 Accessibility, 100 Best Practices, 100 SEO.
+
+Developer Experience:
+- Well-structured folder architecture (app/, components/, lib/, content/).
+- Example env handling; ready to deploy to Vercel.
+- Basic unit tests for core components with Vitest/Testing Library.
+- README with setup, scripts, content editing, and deployment steps.
+
+Deliverables:
+- Complete Next.js codebase ready to run (`yarn dev`), with sample content prefilled.
+- Clear instructions to add/edit projects and translations.
+- A list of recommended next steps (connect a CMS, analytics, contact form provider).
+
+Notes:
+- Favor lightweight animation; ensure 60fps on mid-range devices.
+- No UI libraries besides Tailwind + Framer Motion (ok to use lucide-react icons).
+
+Output:
+- Provide the full project structure, key code files, and any commands to run locally and deploy.
